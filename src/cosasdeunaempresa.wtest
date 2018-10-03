@@ -1,0 +1,25 @@
+import universidades.*
+import profesionales.*
+import empresas.*
+
+describe "cosas de una empresa"{
+	
+	const uniSanMartin = new Universidad(provincia = "buenos aires", honorariosRecomendados = 3500)
+	const uniRosario = new Universidad(provincia = "santa fe", honorariosRecomendados = 2800)
+	const uniCorrientes = new Universidad(provincia = "conrrientes", honorariosRecomendados = 4200)
+	const uniHurlingham = new Universidad(provincia = "buenos aires", honorariosRecomendados = 8800)
+	
+	const juana = new ProfesionalVinculado(universidad = uniRosario)
+	const melina = new ProfesionalAsociado(universidad = uniCorrientes)
+	const rocio = new ProfesionalLibre(universidad = uniHurlingham, honorariosPorHora = 5000, provinciasDondePuedeTrabajar = #{"santa fe", "cordoba", "buenos aires"})
+	const luciana = new ProfesionalLibre(universidad = uniRosario, honorariosPorHora = 3200, provinciasDondePuedeTrabajar = #{"santa fe", "entre rios"})
+	
+	const laSegunda = new Empresa(profesionalesContratados = #{juana, melina, rocio, luciana}, honorario = 3500)
+	
+	test "probar empresa" {
+		
+		assert.equals(#{rocio}, laSegunda.profesionalesCaros())
+		assert.equals(#{uniRosario, uniCorrientes, uniHurlingham}, laSegunda.universidadesFormadoras())
+	
+	}
+}
