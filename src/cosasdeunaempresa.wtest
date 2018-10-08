@@ -10,6 +10,8 @@ describe "cosas de una empresa"{
 	const uniHurlingham = new Universidad(provincia = "buenos aires", honorariosRecomendados = 8800)
 	
 	const juana = new ProfesionalVinculado(universidad = uniRosario)
+	
+	// TODO Prestá atención a los errores, te está marcando algo importante.
 	const melina = new ProfesionalAsociado(universidad = uniCorrientes)
 	const rocio = new ProfesionalLibre(universidad = uniHurlingham, honorariosPorHora = 5000, provinciasDondePuedeTrabajar = #{"santa fe", "cordoba", "buenos aires"})
 	const luciana = new ProfesionalLibre(universidad = uniRosario, honorariosPorHora = 3200, provinciasDondePuedeTrabajar = #{"santa fe", "entre rios"})

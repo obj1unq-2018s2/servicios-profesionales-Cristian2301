@@ -4,6 +4,9 @@ import asociacion.*
 // esta clase está completa, no necesita nada más
 class ProfesionalAsociado {
 	var universidad
+	
+	// TODO Asociación es un objeto global, no hace falta tenerlo como variable, podrías hablarle directamente.
+	// O si querés la referencia tenés que inicializar.a
 	var asociacion
 	
 	method universidad() { 
