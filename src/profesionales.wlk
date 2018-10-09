@@ -8,7 +8,7 @@ class ProfesionalAsociado {
 	// TODO Asociación es un objeto global, no hace falta tenerlo como variable, podrías hablarle directamente.
 	// O si querés la referencia tenés que inicializar.a
 	var asociacion
-	
+
 	method universidad() { 
 		return universidad
 	}
@@ -79,8 +79,6 @@ class ProfesionalLibre {
 		totalCobrado -= cantDinero
 	}
 }
-
-
 
 
 
